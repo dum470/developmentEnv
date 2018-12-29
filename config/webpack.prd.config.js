@@ -3,6 +3,7 @@ const base = require('./webpack.base.config.js');
 // const webpack = require('webpack');
 
 module.exports = merge(base, {
+    mode: 'production',
     optimization: {
         splitChunks: {
             chunks: 'all',
@@ -24,6 +25,7 @@ module.exports = merge(base, {
                     reuseExistingChunk: true
                 }
             }
-        }
+        },
+        runtimeChunk: true
     }
 })
